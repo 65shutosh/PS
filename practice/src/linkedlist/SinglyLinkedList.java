@@ -20,28 +20,28 @@ public class SinglyLinkedList {
 
 	public Node deleteElement(int data) {
 		Node temp = head;
-		Node deletedElement = null , prev = null;
+		Node deletedElement = null, prev = null;
 
-		if(head == null)
+		if (head == null)
 			return null;
-		
+
 		if (temp.data == data) {
 			deletedElement = temp;
 			head = temp.next;
 			deletedElement.next = null;
-		}  
-		
-			while (temp != null && temp.data != data) {
-				prev = temp;
-				temp = temp.next;
-				}
-						
-			if(temp == null)
-				return null;
-			
-			deletedElement = prev.next;
-			prev.next = temp.next ;
-			
+		}
+
+		while (temp != null && temp.data != data) {
+			prev = temp;
+			temp = temp.next;
+		}
+
+		if (temp == null)
+			return null;
+
+		deletedElement = prev.next;
+		prev.next = temp.next;
+
 		return deletedElement;
 	}
 
