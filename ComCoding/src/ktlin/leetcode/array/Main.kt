@@ -1,7 +1,7 @@
 package ktlin.leetcode.array
 
 fun main() {
-    print(isPalindrome("A man, a plan, a canal: Panama"))
-    val name : String? = "Alice"
-    val lengt = name?.let { it.length }
+    var arr =intArrayOf(7,1,5,3,6,4)
+    rotate(arr,3)
+    println(arr.toList())
 }
